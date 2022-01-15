@@ -1,0 +1,76 @@
+body{
+    margin: 0;
+}
+
+#header{
+    height: 280px;
+    width: 100%;
+    margin: 0;
+    background-color:#003580;
+}
+
+#header_info{
+    height: 230px;
+    width: 60%;
+    margin-left: 19%;
+    margin-top: 10px;
+    position:absolute;
+}
+#register{
+    float: right;
+    margin-right: 10px;
+    margin-top: 2px;
+    background-color: white;
+    color:#0071c2;
+    font-size:15px;
+    height: 25px;
+    border: 0;
+}
+#login{
+    float: right;
+    margin-right: 10px;
+    margin-top: 2px;
+    background-color: white;
+    color:#0071c2;
+    font-size:15px;
+    height: 25px;
+    border: 0;
+}
+
+#data_select{
+    height: 40px;
+    width: 60%;
+    border: 4px orange solid;
+    margin-top: 250px;
+    margin-left: 19%;
+    position:absolute;
+}
+
+#city{
+    height: 40px;
+    width: 40%;
+    border: 0;
+    border-right: 4px orange solid  ;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+#check_in{
+    height: 40px;
+    width: 20%;
+    border: 0;
+    position: absolute;
+    border-right: 3px gray solid;    
+
+
+}
+#check_out{
+    height: 40px;
+    width: 20%;
+    border: 0;
+    position: absolute;
+    margin-left: 20%;
+    border-right: 4px orange solid  ;
+
+    
+}

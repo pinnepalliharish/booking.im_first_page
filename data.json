@@ -1,0 +1,143 @@
+
+
+
+{
+    "categories":[
+        {
+            "id":1,
+            "category":"Deluxe"
+        },
+        {
+            "id":2,
+            "category":"Non-Deluxe"
+        },
+        {
+            "id":3,
+            "category":"Ordinary"
+        },
+        {
+            "id":4,
+            "category":"3star"
+        },
+        {
+            "id":5,
+            "category":"5-star"
+        }
+    ],
+    "hotel_Details":[
+    {
+        "id":1,
+        "name":"Aditya inn",
+        "category_id":1,
+        "image":"https://ibb.co/QM0VYt0",
+        "city":"Anantapur",
+        "rating":6.4
+    },
+    {
+        "id":2,
+        "name":"Amar inn",
+        "category_id":2,
+        "image":"https://ibb.co/GRk169k",
+        "city":"Anantapur",
+        "rating":5
+    },
+    {
+        "id":3,
+        "name":"Grand inn",
+        "category_id":3,
+        "image":"https://ibb.co/gyg2RNc",
+        "city":"Anantapur",
+        "rating":3.6
+    },
+    {
+        "id":4,
+        "name":"Sri 7 inn",
+        "category_id":1,
+        "image":"https://ibb.co/YyLxBFV",
+        "city":"Anantapur",
+        "rating":7
+    },
+    {
+        "id":5,
+        "name":"Vinayaka Grand",
+        "category_id":4,
+        "image":"https://ibb.co/wBh020f",
+        "city":"Anantapur",
+        "rating":6
+    },
+    {
+        "id":6,
+        "name":"The capital",
+        "category_id":4,
+        "image":"https://ibb.co/c1D9d78",
+        "city":"Guntur",
+        "rating":5.9
+    },
+    {
+        "id":7,
+        "name":"Decent Residency",
+        "category_id":3,
+        "image":"https://ibb.co/G7qvwZR",
+        "city":"Chittoor",
+        "rating":3
+    },
+    {
+        "id":8,
+        "name":"HSM grand",
+        "category_id":1,
+        "image":"https://ibb.co/58YTdRs",
+        "city":"Chittoor",
+        "rating":7.2
+    },
+    {
+        "id":9,
+        "name":"Jayaram residency",
+        "category_id":3,
+        "image":"https://ibb.co/pjXfwVf",
+        "city":"Chittoor",
+        "rating":" "
+    },
+    {
+        "id":10,
+        "name":"Sai Sadhan residency",
+        "category_id":4,
+        "image":"https://ibb.co/0Xv1H6x",
+        "city":"Chittoor",
+        "rating":7
+    },
+    {
+        "id":11,
+        "name":"Jaya fortune",
+        "category_id":4,
+        "image":"https://ibb.co/hyv3Rvd",
+        "city":"Guntur",
+        "rating":5.8
+    },
+    {
+        "id":12,
+        "name":"Royal mahalakshmi inn",
+        "category_id":4,
+        "image":"https://ibb.co/23hmqSp",
+        "city":"Guntur",
+        "rating":5
+    },
+    {
+        "id":13,
+        "name":"Raj vihar",
+        "category_id":5,
+        "image":"https://ibb.co/nw04DXb",
+        "city":"Kurnool",
+        "rating":6.6
+    },
+    {
+        "id":14,
+        "name":"Mourya lords inn",
+        "category_id":5,
+        "image":"https://ibb.co/CbRYvtm",
+        "city":"Kurnool",
+        "rating":7.6
+    }
+]
+
+    
+}
