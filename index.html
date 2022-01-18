@@ -14,12 +14,71 @@
             </div>
             <div id="data_select">
                 <select id="city">
-                    <option style="text-align: center;">Where are you going</option>
+                    <option style="text-align: center; font-family: sans-serif; color: gray;">Where are you going ?</option>
                 </select>
-                <input id="check_in" type="datetime-local">
-                <input id="check_out" type="datetime-local">
-                <button style="height: 40px;width: 20%; color: white; font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;font-weight: 900; background-color:#0071c2; margin-left: 40%; position:absolute; ">Search</button>
+                <input id="check_in" type="text" placeholder="Check-in Date" onfocus="(this.type='date')" style="text-align: center;">
+                <input id="check_out" type="text" placeholder="Check-out Date" onfocus="(this.type='date')" style="text-align: center;">
+                <button id="search">Search</button>
             </div>
+            <div id="s_body">
+                <h4 style="font-family:sans-serif; font-weight: bold; font-size: 18px; margin: 0;" >Explore top Places in India </h4>
+                <h6 style="margin-top:5px; font-family: sans-serif; font-size: 12px; color: grey; margin-bottom: 0;">These popular destinations have a lot to offer</h6>
+                <div id="pickedplaces">
+                    <div id="agra" style=" width: 45%; height: 300px;">
+                        <img src="images/explore/agra img.jpg" alt="agra img" style="height: 250px;width: 100%; margin-bottom: 2px;">
+                        <h4 style="font-family: sans-serif; text-align: center; margin-top: 2px; margin-bottom: 2px;">Agra</h4>
+                        <h6 style="font-family: sans-serif; text-align: center; color: gray; margin-top: 0;">5 Properties Available</h6>
+                    </div>
+                    <div id="amritsar" style=" width: 45%;height: 300px;">
+                        <img src="images/explore/Amritsar.jpg" alt="Amritsar img" style="height: 250px;width: 100%; margin-bottom: 2px;  ">
+                        <h4 style="font-family: sans-serif; text-align: center;margin-top: 2px; margin-bottom: 2px;">Amritsar</h4>
+                        <h6 style="font-family: sans-serif; text-align: center; color: gray; margin-top: 0;">5 Properties Available</h6>
+                    </div> 
+                    <div id="NewDelhi" style=" width: 45%;height: 300px;">
+                        <img src="images/explore/delhi.jpg" alt="Delhi img" style="height: 250px;width: 100%; margin-bottom: 2px;  ">
+                        <h4 style="font-family: sans-serif; text-align: center;margin-top: 2px; margin-bottom: 2px;">New Delhi</h4>
+                        <h6 style="font-family: sans-serif; text-align: center; color: gray; margin-top: 0;">5 Properties Available</h6>
+                    </div> 
+                    <div id="mumbai" style=" width: 45%;height: 300px;">
+                        <img src="images/explore/mumbai.jpg" alt="mumbai img" style="height: 250px;width: 100%; margin-bottom: 2px;  ">
+                        <h4 style="font-family: sans-serif; text-align: center;margin-top: 2px; margin-bottom: 2px;">Mumbai</h4>
+                        <h6 style="font-family: sans-serif; text-align: center; color: gray; margin-top: 0;">5 Properties Available</h6>
+                    </div>    
+                    <div id="Hyderabad" style=" width: 45%;height: 300px;">
+                        <img src="images/explore/Hyderabad.jpg" alt="hyderabadImg" style="height: 250px;width: 100%; margin-bottom: 2px;  ">
+                        <h4 style="font-family: sans-serif; text-align: center;margin-top: 2px; margin-bottom: 2px;">Hyderabad</h4>
+                        <h6 style="font-family: sans-serif; text-align: center; color: gray; margin-top: 0;">5 Properties Available</h6>
+                    </div> 
+                    <div id="Jaipur" style=" width: 45%;height: 300px;">
+                        <img src="images/explore/jaipur.jpg" alt="mumbai img" style="height: 250px;width: 100%; margin-bottom: 2px;  ">
+                        <h4 style="font-family: sans-serif; text-align: center;margin-top: 2px; margin-bottom: 2px;">Jaipur</h4>
+                        <h6 style="font-family: sans-serif; text-align: center; color: gray; margin-top: 0;">5 Properties Available</h6>
+                    </div>
+                    <div id="goa" style=" width: 45%;height: 300px;">
+                        <img src="images/explore/goa.jpg" alt="mumbai img" style="height: 250px;width: 100%; margin-bottom: 2px;  ">
+                        <h4 style="font-family: sans-serif; text-align: center;margin-top: 2px; margin-bottom: 2px;">Goa</h4>
+                        <h6 style="font-family: sans-serif; text-align: center; color: gray; margin-top: 0;">5 Properties Available</h6>
+                    </div> 
+                    <div id="tirupati" style=" width: 45%;height: 300px;">
+                        <img src="images/explore/tirupati.jpg" alt="mumbai img" style="height: 250px;width: 100%; margin-bottom: 2px;  ">
+                        <h4 style="font-family: sans-serif; text-align: center;margin-top: 2px; margin-bottom: 2px;">Tirupati</h4>
+                        <h6 style="font-family: sans-serif; text-align: center; color: gray; margin-top: 0;">5 Properties Available</h6>
+                    </div>      
+                    <div id="varanasi" style=" width: 45%;height: 300px;">
+                        <img src="images/explore/varanasi img.jpg" alt="mumbai img"style="height: 250px;width: 100%; margin-bottom: 2px;  ">
+                        <h4 style="font-family: sans-serif; text-align: center;margin-top: 2px; margin-bottom: 2px;">varanasi</h4>
+                        <h6 style="font-family: sans-serif; text-align: center; color: gray; margin-top: 0;">5 Properties Available</h6>
+                    </div>
+                    <div id="madurai" style=" width: 45%;height: 300px;">
+                        <img src="images/explore/madurai.jpg" alt="mumbai img" style="height: 250px;width: 100%; margin-bottom: 2px;  ">
+                        <h4 style="font-family: sans-serif; text-align: center;margin-top: 2px; margin-bottom: 2px;">Madurai</h4>
+                        <h6 style="font-family: sans-serif; text-align: center; color: gray; margin-top: 0;">5 Properties Available</h6>
+                    </div>  
+                </div>
+            </div>    
         </div>
     </body>
+    <footer id="footer">
+
+    </footer>
 </html>
