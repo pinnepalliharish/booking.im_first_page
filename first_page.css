@@ -188,7 +188,7 @@ body{
 
 #footer{
     background-color: #003585;
-    height: 290px;
+    height: 310px;
     width: 100%;
     position:absolute;
     margin-top: 1700px;
@@ -220,4 +220,14 @@ body{
 }
 #links{
     text-align: center  ;
+}
+#gototop{
+    text-decoration: none; 
+    margin-left: 48%; 
+    border: 2px white solid; 
+    color: white;
+}
+#gototop:hover{
+    background-color: white;
+    color: #003585;
 }
