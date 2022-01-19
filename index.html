@@ -1,15 +1,56 @@
 <html>
     <head>
         <link rel="stylesheet" href="first_page.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://kit.fontawesome.com/97f33a6782.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <div id="header">
             <div id="header_info">
-                <span style="color: white; font-family:BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;font-size: 25px; margin: 0;" ><b>Booking.im</b> </span>
+                <span style="color: white; font-family:BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;font-size: 25px; margin-bottom: 0;" ><b>Booking.im</b> </span>
                 <button id="login"> <b>Login</b> </button>
                 <button id="register"> <b>Register</b> </button>
                 <!-- <h4 style="margin-top: 0px; color: white; font-family:BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif; font-size:15px; font-weight: 400;">Pick  your Hotels across India.</h4> -->
-                <h1 style="color: white; margin-top: 100px; margin-bottom: 5px; font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif; font-size: 40px;">Find your next stay </h1>
+                <div id="lat_long">
+                    <button onclick="geolocation()" style="font-family: sans-serif; margin-top: 0; font-weight: 900; font-size: 10px; color: #0071c2;">
+                        Get Location
+                    </button>
+                    <p id="out"></p>
+                    <p id="address"></p>
+                    <div id="weather_icon" style="margin: 0;"></div>
+                        <script>
+                            var x = document.getElementById("out")
+                            var y = document.getElementById("address")
+                            var z = document.getElementById("weather_icon")
+                            function geolocation(){
+                                if(navigator.geolocation){
+                                    navigator.geolocation.getCurrentPosition(showPosition)
+                                }else{
+                                    x.innerText = "GeoLocation not supported"
+                                }
+                            }
+        
+                            function showPosition(data){
+                                console.log(data)
+                                // x.innerText =`Your Latitude is ${data.coords.latitude} and Longitude is ${data.coords.longitude}.`
+                                let lat=data.coords.latitude;
+                                let long=data.coords.longitude;
+                                var url = `https://api.openweathermap.org/data/2.5/forecast/daily?lat=${lat}&lon=${long}&mode=json&units=metric&cnt=1&appid=fbf712a5a83d7305c3cda4ca8fe7ef29`
+                                fetch(url)
+                                .then((res) => res.json())
+                                .then((data) => {
+                                    data.list.map((item) => {
+                                        z.innerHTML= `<img class='card-img-top' src='https://openweathermap.org/img/w/${item.weather[0].icon}.png' alt='weather'/>`
+                                        y.innerText=`Current temperature is ${item.temp.day}°C and ${item.weather[0].description} `
+                                        
+                                    })
+                                })
+                            }
+                        </script>
+                </div>
+                
+                
+                <h1 style="color: white; margin-top: 25px; margin-bottom: 5px; font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif; font-size: 40px;">Find your next stay </h1>
                 <h4 style="color: white; margin-top: 0; font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif; font-size:17px; font-weight: 400;">Search for hotels, in your place ... </h4>
             </div>
             <div id="data_select">
@@ -20,65 +61,85 @@
                 <input id="check_out" type="text" placeholder="Check-out Date" onfocus="(this.type='date')" style="text-align: center;">
                 <button id="search">Search</button>
             </div>
-            <div id="s_body">
-                <h4 style="font-family:sans-serif; font-weight: bold; font-size: 18px; margin: 0;" >Explore top Places in India </h4>
-                <h6 style="margin-top:5px; font-family: sans-serif; font-size: 12px; color: grey; margin-bottom: 0;">These popular destinations have a lot to offer</h6>
-                <div id="pickedplaces">
-                    <div id="agra" style=" width: 45%; height: 300px;">
-                        <img src="images/explore/agra img.jpg" alt="agra img" style="height: 250px;width: 100%; margin-bottom: 2px;">
-                        <h4 style="font-family: sans-serif; text-align: center; margin-top: 2px; margin-bottom: 2px;">Agra</h4>
-                        <h6 style="font-family: sans-serif; text-align: center; color: gray; margin-top: 0;">5 Properties Available</h6>
-                    </div>
-                    <div id="amritsar" style=" width: 45%;height: 300px;">
-                        <img src="images/explore/Amritsar.jpg" alt="Amritsar img" style="height: 250px;width: 100%; margin-bottom: 2px;  ">
-                        <h4 style="font-family: sans-serif; text-align: center;margin-top: 2px; margin-bottom: 2px;">Amritsar</h4>
-                        <h6 style="font-family: sans-serif; text-align: center; color: gray; margin-top: 0;">5 Properties Available</h6>
-                    </div> 
-                    <div id="NewDelhi" style=" width: 45%;height: 300px;">
-                        <img src="images/explore/delhi.jpg" alt="Delhi img" style="height: 250px;width: 100%; margin-bottom: 2px;  ">
-                        <h4 style="font-family: sans-serif; text-align: center;margin-top: 2px; margin-bottom: 2px;">New Delhi</h4>
-                        <h6 style="font-family: sans-serif; text-align: center; color: gray; margin-top: 0;">5 Properties Available</h6>
-                    </div> 
-                    <div id="mumbai" style=" width: 45%;height: 300px;">
-                        <img src="images/explore/mumbai.jpg" alt="mumbai img" style="height: 250px;width: 100%; margin-bottom: 2px;  ">
-                        <h4 style="font-family: sans-serif; text-align: center;margin-top: 2px; margin-bottom: 2px;">Mumbai</h4>
-                        <h6 style="font-family: sans-serif; text-align: center; color: gray; margin-top: 0;">5 Properties Available</h6>
-                    </div>    
-                    <div id="Hyderabad" style=" width: 45%;height: 300px;">
-                        <img src="images/explore/Hyderabad.jpg" alt="hyderabadImg" style="height: 250px;width: 100%; margin-bottom: 2px;  ">
-                        <h4 style="font-family: sans-serif; text-align: center;margin-top: 2px; margin-bottom: 2px;">Hyderabad</h4>
-                        <h6 style="font-family: sans-serif; text-align: center; color: gray; margin-top: 0;">5 Properties Available</h6>
-                    </div> 
-                    <div id="Jaipur" style=" width: 45%;height: 300px;">
-                        <img src="images/explore/jaipur.jpg" alt="mumbai img" style="height: 250px;width: 100%; margin-bottom: 2px;  ">
-                        <h4 style="font-family: sans-serif; text-align: center;margin-top: 2px; margin-bottom: 2px;">Jaipur</h4>
-                        <h6 style="font-family: sans-serif; text-align: center; color: gray; margin-top: 0;">5 Properties Available</h6>
-                    </div>
-                    <div id="goa" style=" width: 45%;height: 300px;">
-                        <img src="images/explore/goa.jpg" alt="mumbai img" style="height: 250px;width: 100%; margin-bottom: 2px;  ">
-                        <h4 style="font-family: sans-serif; text-align: center;margin-top: 2px; margin-bottom: 2px;">Goa</h4>
-                        <h6 style="font-family: sans-serif; text-align: center; color: gray; margin-top: 0;">5 Properties Available</h6>
-                    </div> 
-                    <div id="tirupati" style=" width: 45%;height: 300px;">
-                        <img src="images/explore/tirupati.jpg" alt="mumbai img" style="height: 250px;width: 100%; margin-bottom: 2px;  ">
-                        <h4 style="font-family: sans-serif; text-align: center;margin-top: 2px; margin-bottom: 2px;">Tirupati</h4>
-                        <h6 style="font-family: sans-serif; text-align: center; color: gray; margin-top: 0;">5 Properties Available</h6>
-                    </div>      
-                    <div id="varanasi" style=" width: 45%;height: 300px;">
-                        <img src="images/explore/varanasi img.jpg" alt="mumbai img"style="height: 250px;width: 100%; margin-bottom: 2px;  ">
-                        <h4 style="font-family: sans-serif; text-align: center;margin-top: 2px; margin-bottom: 2px;">varanasi</h4>
-                        <h6 style="font-family: sans-serif; text-align: center; color: gray; margin-top: 0;">5 Properties Available</h6>
-                    </div>
-                    <div id="madurai" style=" width: 45%;height: 300px;">
-                        <img src="images/explore/madurai.jpg" alt="mumbai img" style="height: 250px;width: 100%; margin-bottom: 2px;  ">
-                        <h4 style="font-family: sans-serif; text-align: center;margin-top: 2px; margin-bottom: 2px;">Madurai</h4>
-                        <h6 style="font-family: sans-serif; text-align: center; color: gray; margin-top: 0;">5 Properties Available</h6>
-                    </div>  
+        </div>
+
+        <div id="s_body">
+            <h4 style="font-family:sans-serif; font-weight: bold; font-size: 18px; margin: 0;" >Explore top Places in India </h4>
+            <h6 style="margin-top:5px; font-family: sans-serif; font-size: 12px; color: grey; margin-bottom: 0;">These popular destinations have a lot to offer</h6>
+            <div id="pickedplaces">
+                <div id="agra" style=" width: 45%; height: 300px;">
+                    <img src="images/explore/agra img.jpg" alt="agra img" style="height: 250px;width: 100%; margin-bottom: 2px;">
+                    <h4 style="font-family: sans-serif; text-align: center; margin-top: 2px; margin-bottom: 2px;">Agra</h4>
+                    <h6 style="font-family: sans-serif; text-align: center; color: gray; margin-top: 0;">5 Properties Available</h6>
                 </div>
-            </div>    
+                <div id="amritsar" style=" width: 45%;height: 300px;">
+                    <img src="images/explore/Amritsar.jpg" alt="Amritsar img" style="height: 250px;width: 100%; margin-bottom: 2px;  ">
+                    <h4 style="font-family: sans-serif; text-align: center;margin-top: 2px; margin-bottom: 2px;">Amritsar</h4>
+                    <h6 style="font-family: sans-serif; text-align: center; color: gray; margin-top: 0;">5 Properties Available</h6>
+                </div> 
+                <div id="NewDelhi" style=" width: 45%;height: 300px;">
+                    <img src="images/explore/delhi.jpg" alt="Delhi img" style="height: 250px;width: 100%; margin-bottom: 2px;  ">
+                    <h4 style="font-family: sans-serif; text-align: center;margin-top: 2px; margin-bottom: 2px;">New Delhi</h4>
+                    <h6 style="font-family: sans-serif; text-align: center; color: gray; margin-top: 0;">5 Properties Available</h6>
+                </div> 
+                <div id="mumbai" style=" width: 45%;height: 300px;">
+                    <img src="images/explore/mumbai.jpg" alt="mumbai img" style="height: 250px;width: 100%; margin-bottom: 2px;  ">
+                    <h4 style="font-family: sans-serif; text-align: center;margin-top: 2px; margin-bottom: 2px;">Mumbai</h4>
+                    <h6 style="font-family: sans-serif; text-align: center; color: gray; margin-top: 0;">5 Properties Available</h6>
+                    <!-- https://ibb.co/ZXr3XNJ   -- image bb of mumbai-->
+                </div>    
+                <div id="Hyderabad" style=" width: 45%;height: 300px;">
+                    <img src="images/explore/Hyderabad.jpg" alt="hyderabadImg" style="height: 250px;width: 100%; margin-bottom: 2px;  ">
+                    <h4 style="font-family: sans-serif; text-align: center;margin-top: 2px; margin-bottom: 2px;">Hyderabad</h4>
+                    <h6 style="font-family: sans-serif; text-align: center; color: gray; margin-top: 0;">5 Properties Available</h6>
+                </div> 
+                <div id="Jaipur" style=" width: 45%;height: 300px;">
+                    <img src="images/explore/jaipur.jpg" alt="mumbai img" style="height: 250px;width: 100%; margin-bottom: 2px;  ">
+                    <h4 style="font-family: sans-serif; text-align: center;margin-top: 2px; margin-bottom: 2px;">Jaipur</h4>
+                    <h6 style="font-family: sans-serif; text-align: center; color: gray; margin-top: 0;">5 Properties Available</h6>
+                </div>
+                <div id="goa" style=" width: 45%;height: 300px;">
+                    <img src="images/explore/goa.jpg" alt="mumbai img" style="height: 250px;width: 100%; margin-bottom: 2px;  ">
+                    <h4 style="font-family: sans-serif; text-align: center;margin-top: 2px; margin-bottom: 2px;">Goa</h4>
+                    <h6 style="font-family: sans-serif; text-align: center; color: gray; margin-top: 0;">5 Properties Available</h6>
+                </div> 
+                <div id="tirupati" style=" width: 45%;height: 300px;">
+                    <img src="images/explore/tirupati.jpg" alt="mumbai img" style="height: 250px;width: 100%; margin-bottom: 2px;  ">
+                    <h4 style="font-family: sans-serif; text-align: center;margin-top: 2px; margin-bottom: 2px;">Tirupati</h4>
+                    <h6 style="font-family: sans-serif; text-align: center; color: gray; margin-top: 0;">5 Properties Available</h6>
+                </div>      
+                <div id="varanasi" style=" width: 45%;height: 300px;">
+                    <img src="images/explore/varanasi img.jpg" alt="mumbai img"style="height: 250px;width: 100%; margin-bottom: 2px;  ">
+                    <h4 style="font-family: sans-serif; text-align: center;margin-top: 2px; margin-bottom: 2px;">varanasi</h4>
+                    <h6 style="font-family: sans-serif; text-align: center; color: gray; margin-top: 0;">5 Properties Available</h6>
+                </div>
+                <div id="madurai" style=" width: 45%;height: 300px;">
+                    <img src="images/explore/madurai.jpg" alt="mumbai img" style="height: 250px;width: 100%; margin-bottom: 2px;  ">
+                    <h4 style="font-family: sans-serif; text-align: center;margin-top: 2px; margin-bottom: 2px;">Madurai</h4>
+                    <h6 style="font-family: sans-serif; text-align: center; color: gray; margin-top: 0;">5 Properties Available</h6>
+                </div>  
+            </div>
+        </div>
+        <div id="footer">
+            <div id="social_media">
+                <h3 style="font-family: sans-serif; color: white;">Connect us through Social Media</h3>
+                <a href="https://www.instagram.com/harish._.26/" style="font-size: 40px; color: white; margin-right: 10px;" target="_blank"><i class="fab fa-instagram-square"></i></a>
+                <a href="https://www.youtube.com/channel/UCBP3nX5ruhAE0ITqZOohVPg" style="font-size: 40px; color: white;margin-right: 10px;" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="https://twitter.com/Pbharish5" style="font-size: 40px; color: white;" target="_blank" ><i class="fab fa-twitter-square"></i></a>
+            </div>
+            <hr style="color: white; width: 25%; border:1px white solid">
+            <div id="links">
+                <h3 style="font-family: sans-serif; color: white;  margin-bottom: 10px; margin-top: 5px;">Also go through my other sites:</h3>
+                <a href="https://pinnepalliharish.github.io/zomato_homepage/" target="_blank" id="zomato_link">Zomato Like Website</a>
+                <span style="color: white; margin-left: 14px; font-size: 30px;">|</span>
+                <a href="https://pinnepalliharish.github.io/profile_website/" target="_blank" id="profile_link">My Profile Website</a>
+            </div>
+            
+            <hr style="color: white; width: 50%; border:1px white solid">
+
+            <p style="font-family: sans-serif; color: white; text-align: center;">Copyright © 2022 Booking.im. All rights reserved.</p>
+            <p style="font-family: sans-serif; color: white; text-align: center;">(This site is made just as practice to my Web Development Technology course.)  </p>
+            
         </div>
     </body>
-    <footer id="footer">
-
-    </footer>
 </html>
