@@ -12,12 +12,12 @@
                 <button id="register"> <b>Register</b> </button>
                 <!-- <h4 style="margin-top: 0px; color: white; font-family:BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif; font-size:15px; font-weight: 400;">Pick  your Hotels across India.</h4> -->
                 <div id="lat_long">
-                    <button onclick="geolocation()" style="font-family: sans-serif; margin-top: 0; font-weight: 900; font-size: 10px; color: #0071c2;">
-                        Get Location
+                    <button onclick="geolocation()" style="font-family: sans-serif; margin-top: 5px;margin-bottom: 10px; font-weight: 900; font-size: 10px; color: #0071c2;">
+                        Get Temperature (at your location)
                     </button>
                     <p id="out"></p>
-                    <p id="address"></p>
-                    <div id="weather_icon" style="margin: 0;"></div>
+                    <p id="address" style="margin: 0;color: white;  font-family: sans-serif; font-weight: bold;"></p>
+                    <div id="weather_icon" style="margin-top: 5px;  width: 6%;"></div>
                         <script>
                             var x = document.getElementById("out")
                             var y = document.getElementById("address")
@@ -41,7 +41,7 @@
                                 .then((data) => {
                                     data.list.map((item) => {
                                         z.innerHTML= `<img class='card-img-top' src='https://openweathermap.org/img/w/${item.weather[0].icon}.png' alt='weather'/>`
-                                        y.innerText=`Current temperature is ${item.temp.day}°C and ${item.weather[0].description} `
+                                        y.innerText=`Current temperature is ${item.temp.day}°C , ${item.weather[0].description}. `
                                         
                                     })
                                 })
@@ -50,7 +50,7 @@
                 </div>
                 
                 
-                <h1 style="color: white; margin-top: 25px; margin-bottom: 5px; font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif; font-size: 40px;">Find your next stay </h1>
+                <h1 style="color: white; margin-top: 22px; margin-bottom: 5px; font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif; font-size: 40px;">Find your next stay </h1>
                 <h4 style="color: white; margin-top: 0; font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif; font-size:17px; font-weight: 400;">Search for hotels, in your place ... </h4>
             </div>
             <div id="data_select">
