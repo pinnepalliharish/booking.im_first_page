@@ -1,0 +1,70 @@
+#agra{
+    display:inline-block;
+    width:50%;
+    margin-right: 85px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+#agra:hover{
+    transform: scale(1.1);
+}
+#amritsar{
+    display:inline-block;
+    width:50%;
+    margin-bottom: 5px;
+}
+#amritsar:hover{
+    transform: scale(1.1);
+}
+#NewDelhi{
+    display:inline-block;
+    width:50%;
+    margin-right: 85px;
+    margin-bottom: 5px;
+}
+#NewDelhi:hover{
+    transform: scale(1.1);
+}
+#mumbai{
+    display:inline-block;
+    width:50%;
+    margin-bottom: 5px;
+}
+#mumbai:hover{
+    transform: scale(1.1);
+}
+#Hyderabad{
+    display:inline-block;
+    width:50%;
+    margin-right: 85px;
+    margin-bottom: 5px;
+}
+#Hyderabad:hover{
+    transform: scale(1.1);
+}
+#Jaipur{
+    display:inline-block;
+    width:50%;
+    margin-bottom: 5px;
+}
+#Jaipur:hover{
+    transform: scale(1.1);
+}
+#goa{
+    display:inline-block;
+    width:50%;
+    margin-right: 85px;
+    margin-bottom: 5px;
+}
+#goa:hover{
+    transform: scale(1.1);
+}
+
+#bangalore{
+    display:inline-block;
+    margin-bottom: 5px;
+    width:50%;
+}
+#bangalore:hover{
+    transform: scale(1.1);
+}
