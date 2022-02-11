@@ -117,6 +117,7 @@ body{
     margin-top:  60px;
     position:absolute;
     background-color:white;
+    border: 2px #0953bb;
 }
 #video{
     width:1100px;
@@ -221,12 +222,12 @@ body{
     font-size: 20px;
     margin-top: 1410px;
     position:absolute;
-    margin-left: 18.5%;
+    margin-left:300px;
 }
 
 #footer{
     background-color: #003585;
-    height: 350px;
+    height: 320px;
     width: 100%;
     position:absolute;
     margin-top: 1460px;
@@ -686,7 +687,21 @@ body{
         margin-top: 10px;
         position: absolute;
     }
-
+    #s_body{
+        height: 1550px;
+        width:95%;
+        margin-left:23px ;
+        margin-top:  60px;
+        position:absolute;
+        background-color:white;
+        border: 2px #0953bb;
+    }
+    #Explore_top_Places_in_India{
+        text-align: center;
+    }
+    #These_popular_destinations_have_a_lot_to_offer{
+        text-align: center;
+    }
     #video{
         width:400px;
         height:250px ;
@@ -698,7 +713,7 @@ body{
         width: 90%;
         border: 4px orange solid;
         margin-top: 280px;
-        margin-left: 20px;
+        margin-left: 25px;
         position:absolute;
     }
 }
