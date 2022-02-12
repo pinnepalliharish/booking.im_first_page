@@ -227,7 +227,7 @@ body{
 
 #footer{
     background-color: #003585;
-    height: 320px;
+    height: 330px;
     width: 100%;
     position:absolute;
     margin-top: 1460px;
@@ -235,7 +235,6 @@ body{
 }
 
 #social_media{
-    text-align: center;
     margin-top: 20px;
 }
 
@@ -258,7 +257,6 @@ body{
     color: orange;
 }
 #links{
-    text-align: center  ;
 }
 #gototop{
     text-decoration: none; 
