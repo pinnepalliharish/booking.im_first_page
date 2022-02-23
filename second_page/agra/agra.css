@@ -694,7 +694,14 @@ body{
     }
 }
 
-
+@media screen and (max-width:676px) {
+    #gototop{
+        text-decoration: none; 
+        border: 2px white solid; 
+        color: white;
+        margin-top: 10px;
+    }
+}
 
 @media screen and (max-width:616px) {
     #Find_your_next_stay{
