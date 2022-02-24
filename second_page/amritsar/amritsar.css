@@ -124,6 +124,11 @@ body{
     margin-top: 10px;
     border: #0071c2 1px solid;
 }
+
+#hotel:hover{
+    background-color: #e5edf8;
+}
+
 #hotel>img{
     height: 200px;
     width: 270px;
@@ -986,5 +991,8 @@ body{
         font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif; 
         font-size: 30px;
         position:absolute;
+    }
+    #hotle_name{
+        font-size: 7px;
     }
 }
