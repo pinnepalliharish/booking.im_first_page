@@ -1,0 +1,250 @@
+body{
+    margin: 0;
+}
+
+#header{
+    height:100px;
+    width: 100%;
+    background-color: #003585;
+}
+
+#header_info{
+    height: 230px;
+    width: 60%;
+    margin-left: 19%;
+    margin-top: 10px;
+    position:absolute;
+}
+
+#booking_im{
+    color: white; 
+    font-family:BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    font-size: 25px; 
+    margin-bottom: 0;
+}
+#register{
+    float: right;
+    margin-right: 10px;
+    margin-top: 10px;
+    background-color: white;
+    color:#0071c2;
+    font-size:15px;
+    height: 20px;
+    border: 0;
+}
+#login{
+    float: right;
+    margin-right: 10px;
+    margin-top: 10px;
+    background-color: white;
+    color:#0071c2;
+    font-size:15px;
+    height: 20px;
+    border: 0;
+}
+
+#Find_your_next_stay{
+    color: white; 
+    margin-top: 50px; 
+    margin-left: 290px;
+    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif; 
+    font-size: 30px;
+    position:absolute;
+}
+
+#hotel_details{
+    height: 820px;
+    width: 60%;
+    margin-top: 50px;
+    margin-left: 280px;
+    background-color:aliceblue;
+    border: #0071c2 1px solid;
+}
+#hotel_details>h3{
+    font-family: sans-serif;
+    font-size: 30px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    text-align: center;
+    color: #0071c2;
+    font-weight: 800;
+    
+}
+
+#image_in{
+    height: 310px;
+    width: 400px;
+    position:absolute;
+    margin-left: 40px;
+}
+
+#hotel_inside_text{
+    background-color: #003585;
+    height: 60px;
+    width: 100%;
+    position:absolute;
+    text-align: center;
+}
+
+#hotel_inside_text>p{
+    font-family:system-ui;
+    color: white;
+    font-size: 30px;
+    margin-top: 10px;
+    font-weight: 700;
+}
+#room_img>img{
+    height: 250px;
+    width: 100%;
+    margin-top:60px;
+}
+
+#image_out{
+    height: 310px;
+    width: 400px;
+    position:absolute;
+    margin-left: 480px;
+    
+}
+#hotel_outside_text{
+    background-color: #003585;
+    height: 60px;
+    width: 100%;
+    position:absolute;
+    text-align: center;
+}
+
+#hotel_outside_text>p{
+    font-family: system-ui;
+    color: white;
+    font-size: 30px;
+    margin-top: 10px;
+    font-weight: 700;
+}
+
+#hotel_img>img{
+    height: 250px;
+    width: 100%;
+    margin-top:60px;
+}
+
+#services{
+    margin-top: 360px;
+    height: 70px;
+    width: 100%;
+    margin-left: 40px;
+}
+#service{
+    height: 70px;
+    width: 100px;
+    margin-right: 80px;
+    float:left;
+}
+
+#service>span{
+    font-weight: 800;
+    color:black;
+    font-family: sans-serif;
+    font-size: 12px;
+}
+
+.fa-wifi{
+    font-size: 40px;
+    color: #003585;
+    margin-bottom: 10px;
+}
+.fa-square-parking{
+    font-size: 40px;
+    color: #003585;
+    margin-bottom: 10px;
+}
+.fa-air-conditioner{
+    font-size: 40px; 
+    color: #003585;
+    margin-bottom: 10px;
+}
+.fa-virus-covid-slash{
+    font-size: 40px;
+    color: #003585;
+    margin-bottom: 10px;
+}
+.fa-shower{
+    font-size: 40px;
+    color: #003585;
+    margin-bottom: 10px;
+}
+.fa-clock-rotate-left{
+    font-size: 40px;
+    color: #003585;
+    margin-bottom: 10px;
+}
+
+#cost_details>h2{
+    font-family: sans-serif;
+    font-size: 30px;
+    margin-top: 40px;
+    margin-bottom: 15px;
+    color: #0071c2;
+    font-weight: 800;
+}
+
+#cost_details>span{
+    margin-top: 20px;
+    font-family: system-ui;
+    font-size: 15px;
+    font-weight: 700;
+}
+#hotel_details>button{
+    background-color: #003585;
+    color: white;
+    font-family: sans-serif;
+    font-weight: 700;
+    float:right;
+    margin-right: 20px;
+    border-radius: 5px;
+    height: 40px;
+   border-color: aliceblue;
+}
+
+#footer{
+    background-color: #003585;
+    height: 330px;
+    width: 100%;
+    position:absolute;
+    margin-top: 100px;
+    z-index: 0;
+}
+
+#social_media{
+    margin-top: 20px;
+}
+
+#zomato_link{
+    color: white;
+    text-decoration: none; 
+    font-family: Arial, Helvetica, sans-serif;
+}
+#zomato_link:hover{
+    color: orange;
+}
+
+#profile_link{
+    color: white; 
+    text-decoration: none; 
+    margin-left: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#profile_link:hover{
+    color: orange;
+}
+
+#gototop{
+    text-decoration: none; 
+    border: 2px white solid; 
+    color: white;
+    margin-top: 30px;
+}
+#gototop:hover{
+    background-color: white;
+    color: #003585;
+}

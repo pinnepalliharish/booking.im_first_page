@@ -129,7 +129,7 @@ body{
     background-color: #e5edf8;
 }
 
-#hotel>img{
+#hotel_image{
     height: 200px;
     width: 270px;
     margin-top: 10px;
@@ -180,7 +180,7 @@ body{
     margin-bottom: 0;
 }
 
-#hotel>button{
+#btn{
     background-color: #003585;
     margin-top: 5px;
     margin-left: 300px;
@@ -188,9 +188,16 @@ body{
     font-family: sans-serif;
     font-size: 15px;
     border-radius:5%;
+    font-weight: 700;
+    height: 30px;
+    border-radius: 8px;
+    border: 2px black solid;
 }
 
-
+#btn:hover{
+    background-color: #0071c2;
+    border:2px #086afc solid;
+}
 
 #footer{
     background-color: #003585;
@@ -257,8 +264,8 @@ body{
         box-shadow: 5px 5px 10px black;
     }
     #hotels_list{
-        width:60%;
-        margin-left: 450px;
+        width:65%;
+        margin-left: 400px;
         margin-top: 50px;
         position:absolute;
     }
@@ -275,7 +282,7 @@ body{
         position:absolute;
     }
     #filter{
-        width:22%;
+        width:18%;
         height: 520px;
         border: 2px gray solid;
         margin-left: 120px;
@@ -285,7 +292,7 @@ body{
     }
     #hotels_list{
         width:60%;
-        margin-left: 400px;
+        margin-left: 420px;
         margin-top: 50px;
         position:absolute;
     }
@@ -295,9 +302,27 @@ body{
     
 }
 
+@media screen and (max-width:1111px) {
+    #hotels_list{
+        width:60%;
+        margin-left: 400px;
+        margin-top: 50px;
+        position:absolute;
+    }
+    #filter{
+        width:18%;
+        height: 520px;
+        border: 2px gray solid;
+        margin-left: 100px;
+        margin-top: 50px;
+        position:absolute;
+        box-shadow: 5px 5px 10px black;
+    }
+}
+
 @media screen and (max-width:1090px) {
     #filter{
-        width:22%;
+        width:18%;
         height: 520px;
         border: 2px gray solid;
         margin-left: 80px;
@@ -306,8 +331,8 @@ body{
         box-shadow: 5px 5px 10px black;
     }
     #hotels_list{
-        width:60%;
-        margin-left: 350px;
+        width:65%;
+        margin-left: 300px;
         margin-top: 50px;
         position:absolute;
     }
@@ -344,9 +369,10 @@ body{
 }
 
 
-@media screen and (max-width:936px) {
+
+@media screen and (max-width:949px) {
     #filter{
-        width:22%;
+        width:18%;
         height: 520px;
         border: 2px gray solid;
         margin-left: 50px;
@@ -355,7 +381,7 @@ body{
         box-shadow: 5px 5px 10px black;
     }
     #hotels_list{
-        width:60%;
+        width:65%;
         margin-left: 270px;
         margin-top: 50px;
         position:absolute;
@@ -413,7 +439,7 @@ body{
         box-shadow: 5px 5px 10px black;
     }
     #hotels_list{
-        width:60%;
+        width:65%;
         margin-left: 250px;
         margin-top: 50px;
         position:absolute;
@@ -457,9 +483,9 @@ body{
     }
 }
 
-@media screen and (max-width:832px) {
+@media screen and (max-width:840px) {
     #filter{
-        width:22%;
+        width:20%;
         height: 520px;
         border: 2px gray solid;
         margin-left: 30px;
@@ -468,7 +494,7 @@ body{
         box-shadow: 5px 5px 10px black;
     }
     #hotels_list{
-        width:60%;
+        width:65%;
         margin-left: 250px;
         margin-top: 50px;
         position:absolute;
@@ -517,7 +543,7 @@ body{
 
 
 @media screen and (max-width:780px) {
-    #hotel>button{
+    #btn{
         font-size: 10px;
     }
     #hotel>h4{
@@ -528,10 +554,16 @@ body{
         font-size: 10px;
         font-weight: 800;
     }
+    #hotels_list{
+        width:65%;
+        margin-left: 250px;
+        margin-top: 50px;
+        position:absolute;
+    }
 }
 
 @media screen and (max-width:756px) {
-    #hotel>button{
+    #btn{
         font-size: 10px;
     }
     #hotel>h4{
@@ -566,7 +598,7 @@ body{
         margin-top: 50px;
         position:absolute;
     }
-    #hotel>button{
+    #btn{
         font-size: 10px;
     }
     #hotel>h4{
@@ -614,11 +646,11 @@ body{
         margin-top:300px;
         z-index: 0;
     }
-    #hotel>img{
+    #hotel_image{
         height: 240px;
         width: 240px;
     }
-    #hotel>button{
+    #btn{
         font-size: 8px;
         margin-left: 270px;
     }
@@ -663,10 +695,10 @@ body{
         font-size: 30px;
         position:absolute;
     }
-    #hotel>button{
+    #btn{
         font-size: 8px;
     }
-    #hotel>img{
+    #hotel_image{
         height: 240px;
     }
     #hotel>h4{
@@ -699,7 +731,14 @@ body{
     }
 }
 
-
+@media screen and (max-width:632px) {
+    #hotels_list{
+        width:64%;
+        margin-left: 190px; 
+        margin-top: 50px;
+        position:absolute;
+    }
+}
 
 @media screen and (max-width:616px) {
     #Find_your_next_stay{
@@ -717,10 +756,10 @@ body{
         margin-top: 50px;
         position:absolute;
     }
-    #hotel>button{
+    #btn{
         font-size: 8px;
     }
-    #hotel>img{
+    #hotel_image{
         height: 240px;
     }
     #hotel>h4{
@@ -793,13 +832,12 @@ body{
         box-shadow: 5px 5px 10px black;
     }
     #hotels_list{
-        width:65%;
-        margin-left: 180px;
-         
+        width:67%;
+        margin-left: 180px;    
         margin-top: 50px;
         position:absolute;
     }
-    #hotel>button{
+    #btn{
         font-size: 8px;
         margin-left: 260px;
     }
@@ -845,11 +883,11 @@ body{
         margin-top: 50px;
         position:absolute;
     }
-    #hotel>button{
+    #btn{
         font-size: 8px;
         margin-left: 220px;
     }
-    #hotel>img{
+    #hotel_image{
         height: 220px;
         width: 200px;
     }
@@ -950,9 +988,8 @@ body{
         box-shadow: 5px 5px 10px black;
     }
     #hotels_list{
-        width:67%;
+        width:70%;
         margin-left: 140px;
-         
         margin-top: 50px;
         position:absolute;
     }
